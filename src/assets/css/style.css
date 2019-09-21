@@ -18,7 +18,7 @@ textarea { resize: none; }
 a:focus { outline: 0; }
 /* End of CSS Reset */
 
-body { font-size: 15px; font-family: 'Lato', sans-serif; color: #333; margin-top: 30px; }
+body { font-size: 15px; font-family: 'Lato', sans-serif; color: #333; margin-top: 30px; background-color: #958baf !important}
 header h1 { text-align: center; font-weight: bold; padding: 10px 0px; font-size: 20px; }
 .container .form-group { min-height: 35px; }
 .container .form-group label { width: 30%; float: left;
@@ -35,8 +35,8 @@ header h1 { text-align: center; font-weight: bold; padding: 10px 0px; font-size:
 .form-slider input + b { float: left; width: 20px; display: inline-block; margin-left:10px; margin-right: 0; }
 .form-slider .slider.slider-horizontal { width: calc(100% - 60px); float: left; }
 .slider-track-low, .slider-track-high { background: #969696; }
-.btn-secondary { color: #fff; background-color: #6c757d;  border-color: #6c757d; }
-.btn-secondary:hover { color: #fff; background-color: #5a6268; border-color: #545b62; }
+.btn-secondary { color: #fff; background-color: #0f1011;  border-color: #101113; }
+.btn-secondary:hover { color: #fff; background-color: #0b0c0e; border-color: #090b0e; }
 .form-btns { text-align: center; }
 .form-btns button { margin-right: 10px; width: 115px !important} 
 
@@ -418,4 +418,8 @@ width: 8px;
 height: 8px;
 border-radius: 50%;
 background: white;
+}
+
+.bg-white{
+  background-color: white;
 }

@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="wrapper">
 		<header>
-			<h1>Project Manager</h1>
+			<h1>Project Management Portal</h1>
 		</header>
 		<section>
 			<div class="task-manager-page">
@@ -28,7 +28,7 @@
 									<div class="col-sm-12">
 										<div class="col-sm-6 col-sm-offset-3">
 											<div class="form-group ">
-												<label for="task">Project:</label>
+												<label for="task">Project Name:</label>
 												<input type="text" class="form-control" id="Project_Name" name="Project_Name" formControlName="Project_Name">
 												<div class="clearfix"></div>
 											</div>
@@ -38,7 +38,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="col-sm-6 col-sm-offset-3 addprjct-datepicker">
-											<input type="checkbox" class="custom-control-input" id="save-info" (change)="onFilterChange()" required> Set Start Data and End Date
+											<input type="checkbox" class="custom-control-input" id="save-info" (change)="onFilterChange()" required> Set Duration
 											<input type="date" class="datepicker form-control start-Prjct-data" name="Start_Date" formControlName="Start_Date" [attr.disabled]="!filter ? '': null">
 											<input type="date" class="datepicker form-control" name="End_Date" formControlName="End_Date" [attr.disabled]="!filter ? '' : null">
 										</div>
@@ -66,7 +66,7 @@
 									<div class="col-sm-12">
 										<div class="col-sm-6 col-sm-offset-3">
 											<div class="form-group ">
-												<label for="task">Manager:</label>
+												<label for="task">Manager :</label>
 												<input type="text" class="form-control manager-name" id="Manager_Name" name="selectedManager" formControlName="selectedManager">
 												<button type="button" class="btn btn-primary" (click)="ManagerSearch()">Search</button>
 												<div class="clearfix"></div>
@@ -108,30 +108,31 @@
 
 						<div class="listView">
 							<div class="row" *ngFor="let proj of projDetails | filter : { AllProjectSearch : search.projAllSearch}">
-								<div class="col-sm-8 padding-0 bg-gray">
+								<div class="col-sm-7 padding-0 bg-white" >
 									<div class="viewProjectList">Project: {{proj.Project}}</div>
-									<div class="col-sm-6 padding-0">
-										<div class="viewProjectList">No. of Task: {{proj.NoOfTasks}}</div>
+									<div class="col-sm-6 padding-0">										
 										<div class="viewProjectList">Start Date: {{proj.Start_Date | date: 'MM/dd/yyyy'}}</div>
+										<div class="viewProjectList">No. of Task: {{proj.NoOfTasks}}</div>
 									</div>
-									<div class="col-sm-6">
-										<div class="viewProjectList">Completed: {{proj.CompletedTasks}}</div>
+									<div class="col-sm-6">										
 										<div class="viewProjectList">End Date: {{proj.End_Date | date: 'MM/dd/yyyy'}}</div>
+										<div class="viewProjectList">Completed: {{proj.CompletedTasks}}</div>
 									</div>
 								</div>
-								<div class="col-sm-2">
+								<div class="col-sm-3">
 									<div class="addPriority">Priority : {{proj.Priority}}</div>
 
 									<div class="progress progress-bar-vertical">
-										<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="30" [style.height.%]="proj.Active_Progress">
+										<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="30" [style.height.%]="proj.Priority">
 											<span class="sr-only">{{proj.Priority}}</span>
+											
 										</div>
 									</div>
 									<div class="viewPriority bg-gray"></div>
 								</div>
 								<div class="col-sm-2 form-group form-btns btn-Priority">
 									<button class="btn btn-primary" (click)="EditProject(proj)">Update</button>
-									<button class="btn btn-primary" (click)="SuspendProject(proj)">Suspend</button>
+									<button class="btn btn-primary" (click)="SuspendProject(proj)">Delete</button>
 								</div>
 								<div class="clearfix"></div>
 

@@ -2,7 +2,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
-var vURL = "http://localhost/Projectmanagementapi/";
+var vURL = "http://localhost:8777/";
 
 const httpOptions = {
   headers: new HttpHeaders({
