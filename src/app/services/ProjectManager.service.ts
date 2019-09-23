@@ -1,7 +1,7 @@
 ﻿import { Component, NgModule, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-var vURL = "http://localhost/ProjectmanagementPortal/";
+var vURL = "http://localhost:8088/";
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
