@@ -1,39 +1,30 @@
 ﻿import { Component, NgModule, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
 var vURL = "http://localhost/ProjectmanagementPortal/";
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
 };
 
-
 @Injectable({
   providedIn: 'root'
 })
-
 export class ProjectManagerService {
 
   constructor(public http: HttpClient) { }
 
-
   getParentTask() {
     return this.http.get(vURL + "api/TaskManager/GetParentTask");
   }
-
 //
-
   getProjectDetails() {
     return this.http.get(vURL + "api/ProjectManager/Project/GetAll");
   }
-
   getManagerDetails() {
     return this.http.get(vURL + "api/ProjectManager/User/GetAll");
   }
-
 
   submitProject(project) {
    
