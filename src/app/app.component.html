@@ -324,14 +324,14 @@
 
 					<div class="adduser-cont" *ngIf="userShow">
 						<div class="row adduser-heading">
-							<div class="col-sm-7 padding-0">
+							<div class="col-sm-3 padding-0">
 								<div class="form-group ">
 									<input type="hidden" class="form-control" id="Search_By" name="Search_By">
 									<input type="text" class="form-control" id="Search_By" [(ngModel)]="search.userSearch" name="userSearch">
 									<div class="clearfix"></div>
 								</div>
 							</div>
-							<div class="col-sm-5 form-group form-btns">
+							<div class="col-sm-9 form-group form-btns">
 								<label for=""> Sort:</label>
 								<button class="btn btn-primary" (click)="sortUser('First_Name')">First Name</button>
 								<button class="btn btn-primary" (click)="sortUser('Last_Name')">Last Name</button>
